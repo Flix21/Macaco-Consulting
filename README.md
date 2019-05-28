@@ -3,7 +3,7 @@ Un juego de rol retro por consola de comandos en el que vas avanzando de sala en
 equipándote y matando monstruos hasta derrotar al **_Final Boss_**.
 ## Personaje
 ### Acciones fuera de combate
-- [x] Avanzar
+- [ ] Avanzar
 - [ ] Excavar
 - [ ] Huir
 - [ ] NONE _(Control de errores)_
