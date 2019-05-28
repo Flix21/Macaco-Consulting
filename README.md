@@ -1,6 +1,7 @@
 # Proyecto Macaco
 Un juego de rol retro por consola de comandos en el que vas avanzando de sala en sala
 equipándote y matando monstruos hasta derrotar al **_Final Boss_**.
+
 **Integrantes del equipo**
 - Fèlix Ferrer Comas
 - Francisco José Tejada Porcel
