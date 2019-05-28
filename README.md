@@ -6,7 +6,7 @@ que guarda.
 ### Acciones fuera de combate
 - [ ] Avanzar
 - [ ] Excavar
-- [ ] Huir / Harakiri
+- [ ] Huir
 - [ ] NONE _(Control de errores)_
 ### Estadísticas
 - [ ] Nombre
@@ -16,18 +16,10 @@ que guarda.
 - [ ] Salud
 ### Acciones de combate
 - [ ] Atacar
-- [ ] Huir
 - [ ] Esquivar _(No recive daño)_
 - [ ] Cubrirse _(Recibe menos daño)_
 - [ ] NONE _(Control de errores)_
 ## Monstruo
-### Tipos de monstruo
-- [ ] Vampiro
-- [ ] Hombre lobo
-- [ ] Esqueletos
-- [ ] Troll **_Final Boss_**
-- [ ] Dragón **_Final Boss_**
-- [ ] Drácula **_Final Boss_**
 ### Estadísticas
 - [ ] Nombre
 - [ ] Ataque
@@ -38,6 +30,49 @@ que guarda.
 - [ ] Atacar
 - [ ] Esquivar
 - [ ] NONE _(Control de errores)_
+## Castillo
+### Arma
+- Espada
+### Tipos de monstruo
+1. Vampiros
+2. Cavalleros no-muertos
+3. Fantasmas
+4. Esqueletos
+5. **Final Boss**
+### Estancias
+1. Pasillos
+2. Salones
+3. Patios
+4. Torre más alta **_Estancia final_**
+5. Mazmorras
+## Bosque maldito
+### Arma
+- Hacha
+### Tipos de monstruo
+1. Goblins
+2. Trolls
+3. Licántropos
+4. Fantasmas
+5. **Final Boss**
+### Estancias
+1. Ciénaga
+2. Claro
+3. Espesura
+4. Santuário **_Estancia final_**
+## Cueva
+### Arma
+- Maza
+### Tipos de monstruo
+1. Goblins
+2. Trolls
+3. Esqueletos
+4. Osos salvajes
+5. **Final Boss**
+### Estancias
+1. Entrada
+2. Galerías
+3. Galerías oscuras
+4. Sala de la luna _(sin techo) **Estancia final**_
 ## Base de datos
 **Web service** para sacar el ranking con el top 10 de mejores jugadores
 - [ ] Nombre jugador
