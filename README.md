@@ -79,10 +79,17 @@ equipándote y matando monstruos hasta derrotar al **_Final Boss_**.
 3. Galerías oscuras
 4. Sala de la luna _(sin techo) **Estancia final**_
 ## Base de datos
-**Web service** para sacar el ranking con el top 10 de mejores jugadores
+### Tabla ranking de jugadores
+- [ ] Id Jugador
 - [ ] Nombre jugador
 - [ ] % Avance de partida
 - [ ] Fecha y hora de partida
 - [ ] Tiempo jugado
 - [ ] Monstruo que te ha matado
 - [ ] Habilidades obtenidas
+### Tabla Monstruos
+- [ ] Id Monstruo
+- [ ] Nombre Monstruo
+- [ ] Ataque
+- [ ] Defensa
+- [ ] Velocidad
