@@ -119,9 +119,9 @@ public class Main
         {
             personaje.setVelocidad(puntaje_atributos[2]);
         }
-        System.out.println("Perfecto "+personaje.nombre_personaje + ", tienes "
-                + personaje.ataque_personaje + " puntos de ataque, "
-                + personaje.defensa_personaje+" de defensa, "+personaje.velocidad_personaje+" de velocidad y "
+        System.out.println("Perfecto "+personaje.getNombre() + ", tienes "
+                + personaje.getAtaque() + " puntos de ataque, "
+                + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
     }
 }
