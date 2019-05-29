@@ -93,3 +93,10 @@ equipándote y matando monstruos hasta derrotar al **_Final Boss_**.
 - [ ] Ataque
 - [ ] Defensa
 - [ ] Velocidad
+### Tabla Caminos
+- [ ] Id Camino
+- [ ] Nombre Camino
+- [ ] Id Monstruo 1
+- [ ] Id Monstruo 2
+- [ ] Id Monstruo 3
+- [ ] Id Monstruo 4
