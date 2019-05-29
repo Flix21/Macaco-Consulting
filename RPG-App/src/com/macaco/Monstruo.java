@@ -7,43 +7,43 @@ public abstract class Monstruo {
     public int velocidad_monstruo;
     public int puntos_salud_monstruo;
 
-    public String getNombre_monstruo() {
+    public String getNombre() {
         return nombre_monstruo;
     }
 
-    public void setNombre_monstruo(String nombre_monstruo) {
+    public void setNombre(String nombre_monstruo) {
         this.nombre_monstruo = nombre_monstruo;
     }
 
-    public int getAtaque_monstruo() {
+    public int getAtaque() {
         return ataque_monstruo;
     }
 
-    public void setAtaque_monstruo(int ataque_monstruo) {
+    public void setAtaque(int ataque_monstruo) {
         this.ataque_monstruo = ataque_monstruo;
     }
 
-    public int getDefensa_monstruo() {
+    public int getDefensa() {
         return defensa_monstruo;
     }
 
-    public void setDefensa_monstruo(int defensa_monstruo) {
+    public void setDefensa(int defensa_monstruo) {
         this.defensa_monstruo = defensa_monstruo;
     }
 
-    public int getVelocidad_monstruo() {
+    public int getVelocidad() {
         return velocidad_monstruo;
     }
 
-    public void setVelocidad_monstruo(int velocidad_monstruo) {
+    public void setVelocidad(int velocidad_monstruo) {
         this.velocidad_monstruo = velocidad_monstruo;
     }
 
-    public int getPuntos_salud_monstruo() {
+    public int getSalud() {
         return puntos_salud_monstruo;
     }
 
-    public void setPuntos_salud_monstruo(int puntos_salud_monstruo) {
+    public void setSalud(int puntos_salud_monstruo) {
         this.puntos_salud_monstruo = puntos_salud_monstruo;
     }
     //contructor vacio
