@@ -381,7 +381,7 @@ public class Main
     {
         if(entity instanceof Monstruo)
         {
-            gameOver();
+            gameOver(false);
         }
         else
         {
@@ -392,8 +392,10 @@ public class Main
         }
     }
 
-    private static void gameOver()
+    private static void gameOver(boolean win)
     {
+        if(win)
+        {
             System.out.print("   ____                                     \n");
             System.out.print("  6MMMMb/                                   \n");
             System.out.print(" 8P    YM                                   \n");
@@ -416,6 +418,12 @@ public class Main
             System.out.print("  YM      M9    `Mbd'    MM        MM    \n");
             System.out.print("   8b    d8      YMP     YM    d9  MM    \n");
             System.out.print("    YMMMM9        M       YMMMM9  _MM_   \n");
+        }
+        else
+        {
+            // AÑADIR PERSONAJE AL RANKING!!!!!!!!!!!!!!!!!!!!!
+        }
+        // MOSTRAR RANKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     private static Personaje createPlayer()

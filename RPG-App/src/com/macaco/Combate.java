@@ -178,7 +178,7 @@ public class Combate {
     {
         Random probEsquive = new Random();
         int auxEsquive = probEsquive.nextInt(vel_evasor) + 1;
-        if (auxEsquive > 15)
+        if (auxEsquive > 10)
         {
             return true;
         }
