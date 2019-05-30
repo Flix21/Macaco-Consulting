@@ -16,18 +16,25 @@ public class Main
         {
             createPlayer();
         }
-        choosePath();
+        introduction();
+        choosePath(0);
 
     }
 
-    private static void choosePath()
+    private static void introduction()
     {
-        Scanner keyboard = new Scanner(System.in);
         System.out.println(personaje.getNombre() + ", ha estado vagando por la ruta comercial mucho tiempo sin destino.\n" +
                 "Tras meses de viaje se encuentra con un poblado, es momento de empezar una nueva vida y\n" +
                 "busca el gremio más popular para emprender su primera aventura y hacerse conocer como\n" +
-                " un caballero honorable y honrado.\n\n" +
-                "En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
+                " un caballero honorable y honrado.\n");
+    }
+
+    private static void choosePath(int intentos)
+    {
+        intentos++;
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
                 "[1] CASTILLO ENCANTADO     [2] BOSQUE MALDITO      [3] CUEVA TENEBROSA");
         switch (keyboard.nextInt())
         {
@@ -42,6 +49,16 @@ public class Main
                 break;
             default:
                 camino = path.NONE;
+                if(intentos > 1)
+                {
+                    System.exit(10);
+                }
+                else
+                {
+                    System.out.println("¿Me estás tomando el pelo, forastero?");
+                    System.out.println("¡Una tontería más y te porhibo la entrada al gremio!");
+                    choosePath(intentos);
+                }
                 break;
         }
         switch (camino)
