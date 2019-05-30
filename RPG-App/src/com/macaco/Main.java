@@ -12,12 +12,33 @@ public class Main
 
     public static void main(String[] args)  throws InterruptedException /*Excepción necesaria para calcular el tiempo*/
     {
+
+
         if(personaje == null)
         {
             createPlayer();
         }
         introduction();
         choosePath(0);
+
+        System.out.print("                                             __----~~~~~~~~~~~------___\n");
+        System.out.print("                                  .  .   ~~//====......          __--~ ~~\n");
+        System.out.print("                  -.            \\_|//     |||\\\\  ~~~~~~::::... /~\n");
+        System.out.print("               ___-==_       _-~o~  \\/    |||  \\\\            _/~~-\n");
+        System.out.print("       __---~~~.==~||\\=_    -_--~/_-~|-   |\\\\   \\\\        _/~\n");
+        System.out.print("   _-~~     .=~    |  \\\\-_    '-~7  /-   /  ||    \\      /\n");
+        System.out.print(" .~       .~       |   \\\\ -_    /  /-   /   ||      \\   /\n");
+        System.out.print("/  ____  /         |     \\\\ ~-_/  /|- _/   .||       \\ /\n");
+        System.out.print("|~~    ~~|--~~~~--_ \\     ~==-/   | \\~--===~~        .\\\n");
+        System.out.print("         '         ~-|      /|    |-~\\~~       __--~~\n");
+        System.out.print("                     |-~~-_/ |    |   ~\\_   _-~            /\\\n");
+        System.out.print("                          /  \\     \\__   \\/~                \\__\n");
+        System.out.print("                      _--~ _/ | .-~~____--~-/                  ~~==.\n");
+        System.out.print("                     ((->/~   '.|||' -_|    ~~-/ ,              . _||\n");
+        System.out.print("                                -_     ~\\      ~~---l__i__i__i--~~_/\n");
+        System.out.print("                                _-~-__   ~)  \\--______________--~~\n");
+        System.out.print("                              //.-~~~-~_--~- |-------~~~~~~~~\n");
+        System.out.print("                                     //.-~~~--\\\n");
 
     }
 
@@ -66,14 +87,85 @@ public class Main
             case CASTILLO:
                 enemy  = Arrays.asList("VAMPIRO", "CABALLERO HUECO", "FANTASMA", "ESQUELETO");
                 estancia  = Arrays.asList("PASILLO", "SALÓN", "PATIO", "TORRE", "MAZMORRA");
+
+                System.out.println("Te diriges al castillo y ves una puerta enorme en la entrada que se encuentra abierta.\n");
+
+                System.out.print("                           o                    \n");
+                System.out.print("                       _---|         _ _ _ _ _ \n");
+                System.out.print("                    o   ---|     o   ]-I-I-I-[ \n");
+                System.out.print("   _ _ _ _ _ _  _---|      | _---|    \\ ` ' / \n");
+                System.out.print("   ]-I-I-I-I-[   ---|      |  ---|    |.   | \n");
+                System.out.print("    \\ `   '_/       |     / \\    |    | /^\\| \n");
+                System.out.print("     [*]  __|       ^    / ^ \\   ^    | |*|| \n");
+                System.out.print("     |__   ,|      / \\  /    `\\ / \\   | ===| \n");
+                System.out.print("  ___| ___ ,|__   /    /=_=_=_=\\   \\  |,  _|\n");
+                System.out.print("  I_I__I_I__I_I  (====(_________)___|_|____|____\n");
+                System.out.print("  \\-\\--|-|--/-/  |     I  [ ]__I I_I__|____I_I_| \n");
+                System.out.print("   |[]      '|   | []  |`__  . [  \\-\\--|-|--/-/  \n");
+                System.out.print("   |.   | |' |___|_____I___|___I___|---------| \n");
+                System.out.print("  / \\| []   .|_|-|_|-|-|_|-|_|-|_|-| []   [] | \n");
+                System.out.print(" <===>  |   .|-=-=-=-=-=-=-=-=-=-=-|   |    / \\  \n");
+                System.out.print(" ] []|`   [] ||.|.|.|.|.|.|.|.|.|.||-      <===> \n");
+                System.out.print(" ] []| ` |   |/////////\\\\\\\\\\\\\\\\\\\\.||__.  | |[] [ \n");
+                System.out.print(" <===>     ' ||||| |   |   | ||||.||  []   <===>\n");
+                System.out.print("  \\T/  | |-- ||||| | O | O | ||||.|| . |'   \\T/ \n");
+                System.out.print("   |      . _||||| |   |   | ||||.|| |     | |\n");
+                System.out.print("../|' v . | .|||||/____|____\\|||| /|. . | . ./\n");
+                System.out.print(".|//\\............/...........\\........../../\\\\\\\n");
+
+
+                System.out.println("En el camino ves un multitud de huellas muy separadas entre sí, parece que alguien huyó despavorido de éste lugar.");
+                System.out.println("Entras por la puerta principal y en el recibidor encuentras una espada larga ensangrentada. ¿La cojes?");
+                System.out.println("         />_________________");
+                System.out.println("[########[]_________________>");
+                System.out.println("         \\>");
+                takeWeapon(keyboard);
                 break;
             case BOSQUE:
                 enemy  = Arrays.asList("GOBLIN", "TROLL", "FANTASMA", "LICÁNTROPO");
                 estancia  = Arrays.asList("CIÉNAGA", "CLARO", "ESPESURA", "SANTUARIO");
+                System.out.println("Te adentras en el bosque y ves que se empieza a levantar una espesa niebla");
+
+
+                System.out.println("  ,  /\\  .  ");
+                System.out.print(" //`-||-'\\\\ \n");
+                System.out.print("(| -=||=- |)\n");
+                System.out.print(" \\\\,-||-.// \n");
+                System.out.print("  `  ||  '  \n");
+                System.out.print("     ||     \n");
+                System.out.print("     ||     \n");
+                System.out.print("     ||     \n");
+                System.out.print("     ||     \n");
+                System.out.print("     ||     \n");
+                System.out.print("     ()\n");
+                takeWeapon(keyboard);
                 break;
             case CUEVA:
                 enemy  = Arrays.asList("GOBLIN", "TROLL", "OSO SALVAJE", "ESQUELETO");
                 estancia  = Arrays.asList("ENTRADA", "GALERÍA", "GALERÍA OSCURA", "GALERÍA DE LA LUNA");
+
+                System.out.print("        |\\\n");
+                System.out.print("        | \\        /|\n");
+                System.out.print("        |  \\__  / |\n");
+                System.out.print("       /|__/AMMA\\/  |\n");
+                System.out.print("     /AMMMMMMMMMMM\\_|\n");
+                System.out.print(" _/AMMMMMMMMMMMMMMA\n");
+                System.out.print(" \\   |MVKMMM/ .\\MMMMM\\\n");
+                System.out.print("  \\__/MMMMMM\\  /MMMMMM---\n");
+                System.out.print("  |MMMMMMMMMMMMMMMMMM|  /\n");
+                System.out.print("  |MMMM/. \\MM.--MMMMMM\\/\n");
+                System.out.print("  /\\MMM\\  /MM\\  |MMMMMM   _\n");
+                System.out.print(" /  |MMMMMMMMM\\ |MMMMMM--/   \\-.\n");
+                System.out.print("/_/MMMMMMMMMM\\|M.--M/_/_|   \\\n");
+                System.out.print("     \\VMM/\\MMMMMMM\\  |      /\\ \\/\n");
+                System.out.print("      \\V/  \\MMMMMMM\\ |     /_  /\n");
+                System.out.print("        |  /MMMV'   \\|    |/ _/\n");
+                System.out.print("        | /              _/  /\n");
+                System.out.print("        |/              /| \\'\n");
+                System.out.print("                       /_  /\n");
+                System.out.print("                       /  /\n");
+                System.out.print("                      /  /\n");
+                takeWeapon(keyboard);
                 break;
         }
 
@@ -87,6 +179,92 @@ public class Main
             else
                 System.out.print(enemy.get(i));
         }
+    }
+
+    private static void takeWeapon(Scanner keyboard)
+    {
+        System.out.println("[1] SI      [2] NO");
+        switch (keyboard.nextInt())
+        {
+            case 1:
+                personaje.setAtaque(personaje.getAtaque() + 10);
+                personaje.setVelocidad(personaje.getVelocidad() - 5);
+                personaje.setWeapon(true);
+                System.out.println("Sabia decisión, has ganado 10 puntos de ataque.");
+                System.out.println("Pero el arma pesa bastante y pierdes 5 puntos de velocidad");
+                System.out.println("Puntos actuales\n" + personaje.getAtaque()+"\n"+ personaje.getDefensa()+
+                                    "\n"+ personaje.getVelocidad() + "\n" + personaje.getSalud());
+                break;
+            case 2:
+                nextPlace(keyboard);
+                break;
+            default:
+                nextPlace(keyboard);
+                break;
+        }
+    }
+
+    private static void nextPlace(Scanner keyboard)
+    {
+        checkEnemyBattle();
+        System.out.println("Ha habido una batalla muy reciente que se cobró la vida de un valeroso caballero\n" +
+                            "antes de que " + personaje.getNombre() + " llegase...\n ");
+        System.out.println("Parece que su armadura aún está en buen estado, no es de buen augurio profanar un cadaver\n" +
+                            "pero no completar la aventura supondría un grave peligro para los habitantes.\n");
+        System.out.println("¿Coges la armadura?\n");
+        System.out.print("              {}\n");
+        System.out.print("             .--.\n");
+        System.out.print("            /.--.\\\n");
+        System.out.print("            |====|\n");
+        System.out.print("            |`::`|\n");
+        System.out.print("        .-;`\\..../`;-.\n");
+        System.out.print("       /  |...::...|  \\\n");
+        System.out.print("      |   /'''::'''\\   |\n");
+        System.out.print("      ;--'\\   ::   /\\--;\n");
+        System.out.print("      <_>,>.::.<,<_>\n");
+        System.out.print("      |  |/   ^^   \\|  |\n");
+        System.out.print("      \\::/|        |\\::/\n");
+        System.out.print("      |||\\|        |/|||\n");
+        System.out.print("      ''' |_/\\___| '''\n");
+        System.out.print("           \\_ || _/\n");
+        System.out.print("           <_ >< _>\n");
+        System.out.print("           |  ||  |\n");
+        System.out.print("           |  ||  |\n");
+        System.out.print("          \\.:||:./\n");
+        System.out.print("         /_/\\_\\\n");
+        System.out.println("[1] SI      [2] NO");
+        switch (keyboard.nextInt())
+        {
+            case 1:
+                personaje.setDefensa(personaje.getDefensa() + 10);
+                personaje.setVelocidad(personaje.getVelocidad() - 5);
+                personaje.setWeapon(true);
+                System.out.println("Sabia decisión, has ganado 10 puntos de defensa.");
+                System.out.println("Pero la armadura pesa bastante y pierdes 5 puntos de velocidad");
+                System.out.println("Puntos actuales\n" + personaje.getAtaque()+"\n"+ personaje.getDefensa()+
+                        "\n"+ personaje.getVelocidad() + "\n" + personaje.getSalud());
+                break;
+            case 2:
+                nextPlace(keyboard);
+                break;
+            default:
+                nextPlace(keyboard);
+                break;
+        }
+    }
+
+    private static void checkEnemyBattle()
+    {
+        int randEnemy = randomRange(1,5);
+        if(randEnemy >= 4)
+        {
+//            startBattle();
+        }
+    }
+
+    private static void startBattle(Monstruo monster)
+    {
+
     }
 
     private static void endGame()
@@ -149,4 +327,13 @@ public class Main
         return personaje;
     }
 
+    private static int randomRange(int min, int max) {
+
+        if (min >= max) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
+    }
 }
