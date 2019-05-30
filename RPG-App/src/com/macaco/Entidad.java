@@ -1,6 +1,7 @@
 package com.macaco;
 
-public abstract class Entidad {
+public abstract class Entidad
+{
     public String nombre ="";
     public int ataque;
     public int defensa;
