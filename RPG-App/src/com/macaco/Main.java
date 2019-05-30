@@ -113,6 +113,7 @@ public class Main
             System.out.println("¿Cuántos puntos de los " + puntos + " quieres añadirle a " + atributos[i] + "?");
             Scanner keyboard = new Scanner(System.in);
             String puntos_agregados = keyboard.nextLine();
+            if (puntos_agregados.matches("[0-9]+") && puntos_agregados.length() >= 1) {
             if(Integer.parseInt(puntos_agregados) <= puntos)
             {
                 puntos -= Integer.parseInt(puntos_agregados);
@@ -123,6 +124,10 @@ public class Main
                 System.out.println("Te has pasado de los 50 puntos, no eres digno para jugar Macaco...");
                 System.exit(10);
                 break;
+            }
+        }else {
+                System.out.println("¡Solo numeros!");
+                Main.createPlayer();
             }
         }
         if(puntaje_atributos[0] != null)
