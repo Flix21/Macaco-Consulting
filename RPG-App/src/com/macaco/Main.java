@@ -119,7 +119,7 @@ public class Main
         {
             personaje.setVelocidad(puntaje_atributos[2]);
         }
-        System.out.println("Perfecto "+personaje.getNombre() + ", tienes "
+        System.out.println("Perfecto " + personaje.getNombre() + ", tienes "
                 + personaje.getAtaque() + " puntos de ataque, "
                 + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
