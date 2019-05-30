@@ -340,13 +340,42 @@ public class Main
         }
     }
 
-    private static void startBattle(Monstruo monster)
+    private static void startBattle(Entidad entity)
     {
 
     }
 
-    private static void endGame()
+    private static void endGame(Entidad entity)
     {
+        if(entity instanceof Monstruo)
+        {
+            System.out.print("   ____                                     \n");
+            System.out.print("  6MMMMb/                                   \n");
+            System.out.print(" 8P    YM                                   \n");
+            System.out.print("6M      Y    ___    ___  __    __     ____  \n");
+            System.out.print("MM         6MMMMb   `MM 6MMb  6MMb   6MMMMb \n");
+            System.out.print("MM        8M'  `Mb   MM69 `MM69 `Mb 6M'  `Mb\n");
+            System.out.print("MM     ___    ,oMM   MM'   MM'   MM MM    MM\n");
+            System.out.print("MM     `M',6MM9'MM   MM    MM    MM MMMMMMMM\n");
+            System.out.print("YM      M MM'   MM   MM    MM    MM MM      \n");
+            System.out.print(" 8b    d9 MM.  ,MM   MM    MM    MM YM    d9\n");
+            System.out.print("  YMMMM9  `YMMM9'Yb._MM_  _MM_  _MM_ YMMMM9 \n\n");
+            System.out.print("     ____                                \n");
+            System.out.print("    6MMMMb                               \n");
+            System.out.print("   8P    Y8                              \n");
+            System.out.print("  6M      Mb ____    ___   ____   ___  __\n");
+            System.out.print("  MM      MM `MM(    )M'  6MMMMb  `MM 6MM\n");
+            System.out.print("  MM      MM  `Mb    d'  6M'  `Mb  MM69 \"\n");
+            System.out.print("  MM      MM   YM.  ,P   MM    MM  MM'   \n");
+            System.out.print("  MM      MM    MM  M    MMMMMMMM  MM    \n");
+            System.out.print("  YM      M9    `Mbd'    MM        MM    \n");
+            System.out.print("   8b    d8      YMP     YM    d9  MM    \n");
+            System.out.print("    YMMMM9        M       YMMMM9  _MM_   \n");
+        }
+        else
+        {
+            //AGREGAR JUGADOR A LA BBDD
+        }
         //Para saber el tiempo de juego
         //System.out.println(GameTimer.getPlayTime());
     }
