@@ -80,12 +80,12 @@ public class Main
 
     private static void createPlayer()
     {
-        System.out.println("Bienvenido a Macaco. Dinos tu nombre");
+        System.out.println("Bienvenido a Macaco. Dinos tu nombre...");
         Scanner keyboard_nombre = new Scanner(System.in);
         personaje = new Personaje();
 
         personaje.setNombre(keyboard_nombre.nextLine());
-        System.out.println("Muy bien " + personaje.getNombre() + ", preparate para la aventura");
+        System.out.println("Muy bien " + personaje.getNombre() + ", ¡prepárate para la aventura!");
         int puntos=50;
         System.out.println("Tienes 50 puntos para ser distribuidos entre los atributos Ataque, Defensa y Velocidad");
         String[] atributos = {"ataque", "defensa", "velocidad"};
@@ -103,7 +103,8 @@ public class Main
             }
             else
             {
-                System.out.println("Te has pasado de los 50 puntos");
+                System.out.println("Te has pasado de los 50 puntos, no eres digno para jugar Macaco...");
+                System.exit(10);
                 break;
             }
         }
@@ -123,5 +124,7 @@ public class Main
                 + personaje.getAtaque() + " puntos de ataque, "
                 + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
+
+
     }
 }
