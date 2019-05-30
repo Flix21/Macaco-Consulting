@@ -1,6 +1,6 @@
 package com.macaco;
 
-import java.util.*;
+        import java.util.*;
 
 public class Main
 {
@@ -24,11 +24,11 @@ public class Main
     {
         Scanner keyboard = new Scanner(System.in);
         System.out.println(personaje.getNombre() + ", ha estado vagando por la ruta comercial mucho tiempo sin destino.\n" +
-                            "Tras meses de viaje se encuentra con un poblado, es momento de empezar una nueva vida y\n" +
-                            "busca el gremio más popular para emprender su primera aventura y hacerse conocer como\n" +
-                            " un cavallero honorable y honrado.\n\n" +
-                            "En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
-                            "[1] CASTILLO ENCANTADO     [2] BOSQUE MALDITO      [3] CUEVA TENEBROSA");
+                "Tras meses de viaje se encuentra con un poblado, es momento de empezar una nueva vida y\n" +
+                "busca el gremio más popular para emprender su primera aventura y hacerse conocer como\n" +
+                " un caballero honorable y honrado.\n\n" +
+                "En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
+                "[1] CASTILLO ENCANTADO     [2] BOSQUE MALDITO      [3] CUEVA TENEBROSA");
         switch (keyboard.nextInt())
         {
             case 1:
