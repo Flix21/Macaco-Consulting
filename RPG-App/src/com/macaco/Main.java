@@ -88,6 +88,7 @@ public class Main
                 enemy  = Arrays.asList("VAMPIRO", "CABALLERO HUECO", "FANTASMA", "ESQUELETO");
                 estancia  = Arrays.asList("PASILLO", "SALÓN", "PATIO", "TORRE", "MAZMORRA");
 
+                warningMessage();
                 System.out.println("Te diriges al castillo y ves una puerta enorme en la entrada que se encuentra abierta.\n");
 
                 System.out.print("                           o                    \n");
@@ -115,7 +116,7 @@ public class Main
 
 
                 System.out.println("En el camino ves un multitud de huellas muy separadas entre sí, parece que alguien huyó despavorido de éste lugar.");
-                System.out.println("Entras por la puerta principal y en el recibidor encuentras una espada larga ensangrentada. ¿La cojes?");
+                System.out.println("Entras por la puerta principal y en el recibidor encuentras una espada larga ensangrentada.\n¿La cojes?");
                 System.out.println("         />_________________");
                 System.out.println("[########[]_________________>");
                 System.out.println("         \\>");
@@ -124,8 +125,49 @@ public class Main
             case BOSQUE:
                 enemy  = Arrays.asList("GOBLIN", "TROLL", "FANTASMA", "LICÁNTROPO");
                 estancia  = Arrays.asList("CIÉNAGA", "CLARO", "ESPESURA", "SANTUARIO");
-                System.out.println("Te adentras en el bosque y ves que se empieza a levantar una espesa niebla");
 
+                warningMessage();
+                System.out.println("Te adentras en el bosque y ves que se empieza a levantar una espesa niebla.\n");
+
+                System.out.print("                                            .__ ._       \\_.\n");
+                System.out.print("                                     _, _.  '  \\/   \\.-  /\n");
+                System.out.print("                                      \\/     .-_`   // |/     \\,\n");
+                System.out.print("                     .-\"\"\"\"-.          \\.   '   \\`. ||  \\.-'  /\n");
+                System.out.print("                    F        Y        .-.`-(   _/\\ V/ \\\\//,-' >-'   ._,\n");
+                System.out.print("                   F          Y   .__/   `. \\.   ' J   ) ./  / __._/\n");
+                System.out.print("                  J         \\, I    '   _/ \\  \\  | |  / /  .'-'.-' `._,\n");
+                System.out.print("           (       L   \\_.--.| \\_.      ' .___ `\\: | / .--'.-'\"     \\\n");
+                System.out.print("         \\ '\\    .  L   /    \\\\/        ._/`-.`  \\ .'.' .'---./__   '\n");
+                System.out.print("    \\__  '\\ ) \\._/   `-.__. ` \\\\_. '   .---.  \\     /  /  ,   `  `\n");
+                System.out.print("  --'  \\\\  ): // \\,            `-.`__.'     `- \\  /   / _/-.---.__.- .\n");
+                System.out.print("     _.-`.'/ /'\\_, ._     >--.-\"\"'____.--\"`_     '   /.'..' \\   \\   _/`\n");
+                System.out.print(" _ .---._\\ \\'/ '__./__.-..  / .-|(    x_.-'___  |   :' /    _..---_' \\\n");
+                System.out.print(" .:' /`\\ `. `..'.--'\\      /.' /`-`._  `-,'   ` '   I '_.--'__--..___.--._.-\n");
+                System.out.print("     `  `. `\\/'/  _.   _.-'      _.____./ .-.--\"\"-. .-\"    ' _..-.---'   \\\n");
+                System.out.print("  -._ .--.\\ / /-./     /   .---'-//.___. .-'       \\__ .--.  `    `.     '`-\n");
+                System.out.print(" ,--'/.-. ^.   .-.--.  ` _/    _//     ./   _..   .'  `.    \\ \\    |_.\n");
+                System.out.print("    /' | >.   ' | \\._.-       '    _..'  `.' . `.       )    | |\\  `\n");
+                System.out.print("  ./ \\ \\'  ) c| /  \\     \\_..  .--'    ,\\ \\_/`  :    )  (`-. `.|`\\\\\n");
+                System.out.print("   \\'  / ,-.  | ` ./`  ._/ `\\\\'.--.,-((  `.`.__ |   _/   \\    |)  `--._/`\n");
+                System.out.print("______'\\   |  < __________  //'  //  _)   )/-._`.  (,-')  )  / \\_.    /\\. _____\n");
+                System.out.print("a:f        |  |        .__./    //  '\\  |//    `.\\ '\\ (  (  <`   ._  '\n");
+                System.out.print("           >  |      _.  /   ..-\\ _    _/ \\_.  \\ `\\    \\_ `---.-'__\n");
+                System.out.print("        . /  `-   _.'        /   `   _/|       J  /`     `-,,-----.`-.\n");
+                System.out.print("            '  .:'          '`      '          < `   f  I //        `\u00AD\\_,\n");
+                System.out.print("              '                         \\.     J        I/\\_.        ./\n");
+                System.out.print("         __/                            `:     I  .:    K  `          `\n");
+                System.out.print("         \\/ )                            `,   J         L\n");
+                System.out.print("          )_(_                             .  F  .-'    J\n");
+                System.out.print("         /    `.                           .  I  (.   . I _.-.._\n");
+                System.out.print("   '    <'    \\ )                     _.---.J/      :'   L -'\n");
+                System.out.print(" .:.     \\. _.->/                        _.-'_.)     ` `-.`---.,_.\n");
+                System.out.print(":<        (    \\                    .--\"\"   .F' J) `.`L.__`-.___\n");
+                System.out.print(".:        |-'\\_.|                          Y ..Z     ))   `--'  `-\n");
+                System.out.print(".         ) | > :                            . '    :'\n");
+                System.out.print("          / ) L_J                            .x,.\n");
+                System.out.print("          L_J .,                             .:<.,\n");
+
+                System.out.println("Por el camino encuentras un hacha un muy afilada tirada en el suelo, debe de habersele caido a alguien...");
 
                 System.out.println("  ,  /\\  .  ");
                 System.out.print(" //`-||-'\\\\ \n");
@@ -138,11 +180,40 @@ public class Main
                 System.out.print("     ||     \n");
                 System.out.print("     ||     \n");
                 System.out.print("     ()\n");
+
+                System.out.println("¿La cojes?");
                 takeWeapon(keyboard);
                 break;
             case CUEVA:
                 enemy  = Arrays.asList("GOBLIN", "TROLL", "OSO SALVAJE", "ESQUELETO");
                 estancia  = Arrays.asList("ENTRADA", "GALERÍA", "GALERÍA OSCURA", "GALERÍA DE LA LUNA");
+
+                warningMessage();
+                System.out.println("Te diriges a las montañas al norte del poblado en busca de la cueva y tras varias leguas\n" +
+                                    "encuentras la entrada con señales de lucha en el interior.\n");
+
+                System.out.print("                    /   \\              /'\\       _                              \n");
+                System.out.print("\\_..           /'.,/     \\_         .,'   \\     / \\_                            \n");
+                System.out.print("    \\         /            \\      /       \\  /    \\     _                     \n");
+                System.out.print("     \\__,.   /              \\    /           \\/.,   _|  _/ \\                    \n");
+                System.out.print("          \\_/                \\  /',.,''\\      \\_ \\_/  \\/    \\                   \n");
+                System.out.print("                           _  \\/   /    ',../',.\\    _/      \\                  \n");
+                System.out.print("             /           _/m\\  \\  /    |         \\  /.,/'\\   _\\                 \n");
+                System.out.print("           /           /MMmm\\  \\     |          \\/      \\_/  \\                \n");
+                System.out.print("          /      \\     |MMMMmm|   \\__   \\          \\_       \\   \\_              \n");
+                System.out.print("                  \\   /MMMMMMm|      \\   \\           \\       \\    \\             \n");
+                System.out.print("                   \\  |MMMMMMmm\\      \\__            \\      \\_   \\            \n");
+                System.out.print("                    \\|MMMMMMMMmm|_.'  /\\            \\       \\   \\_          \n");
+                System.out.print("                    /'.,_____...,,'   \\            \\   \\        \\         \n");
+                System.out.print("                   /       \\          |      \\    |_     \\   \\       \\        \n");
+                System.out.print("                 /        |           \\      \\     \\     \\    \\       \\_      \n");
+                System.out.print("                /                               \\     \\     \\_   \\        \\     \n");
+                System.out.print("                                                 \\     \\      \\   \\__      \\    \n");
+                System.out.print("                                                  \\     \\_     \\     \\      \\   \n");
+                System.out.print("                                                   |      \\     \\     \\      \\  \n");
+                System.out.print("                                                    \\            |            \\ \n");
+
+                System.out.println("Entras y ves en el suelo una maza y seguidamente un rastro...\n");
 
                 System.out.print("        |\\\n");
                 System.out.print("        | \\        /|\n");
@@ -165,10 +236,16 @@ public class Main
                 System.out.print("                       /_  /\n");
                 System.out.print("                       /  /\n");
                 System.out.print("                      /  /\n");
+
+                System.out.println("¿La coges?");
                 takeWeapon(keyboard);
                 break;
         }
 
+    }
+
+    private static void warningMessage()
+    {
         System.out.println("Arrancas el trozo de pergamino del tablón y en él ves una advertencia:");
         System.out.println("Éstos son los enemigos con los que te puedes encontrar");
 
@@ -194,6 +271,7 @@ public class Main
                 System.out.println("Pero el arma pesa bastante y pierdes 5 puntos de velocidad");
                 System.out.println("Puntos actuales\n" + personaje.getAtaque()+"\n"+ personaje.getDefensa()+
                                     "\n"+ personaje.getVelocidad() + "\n" + personaje.getSalud());
+                nextPlace(keyboard);
                 break;
             case 2:
                 nextPlace(keyboard);
