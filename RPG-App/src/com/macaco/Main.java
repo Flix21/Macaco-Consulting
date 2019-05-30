@@ -78,7 +78,7 @@ public class Main
         //System.out.println(GameTimer.getPlayTime());
     }
 
-    private static void createPlayer()
+    private static Personaje createPlayer()
     {
         System.out.println("Bienvenido a Macaco. Dinos tu nombre...");
         Scanner keyboard_nombre = new Scanner(System.in);
@@ -124,7 +124,7 @@ public class Main
                 + personaje.getAtaque() + " puntos de ataque, "
                 + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
-
-
+        return personaje;
     }
+
 }
