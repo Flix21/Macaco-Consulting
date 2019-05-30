@@ -1,6 +1,6 @@
 package com.macaco;
 
-import java.util.*;
+        import java.util.*;
 
 public class Main
 {
@@ -24,11 +24,11 @@ public class Main
     {
         Scanner keyboard = new Scanner(System.in);
         System.out.println(personaje.getNombre() + ", ha estado vagando por la ruta comercial mucho tiempo sin destino.\n" +
-                            "Tras meses de viaje se encuentra con un poblado, es momento de empezar una nueva vida y\n" +
-                            "busca el gremio más popular para emprender su primera aventura y hacerse conocer como\n" +
-                            " un cavallero honorable y honrado.\n\n" +
-                            "En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
-                            "[1] CASTILLO ENCANTADO     [2] BOSQUE MALDITO      [3] CUEVA TENEBROSA");
+                "Tras meses de viaje se encuentra con un poblado, es momento de empezar una nueva vida y\n" +
+                "busca el gremio más popular para emprender su primera aventura y hacerse conocer como\n" +
+                " un caballero honorable y honrado.\n\n" +
+                "En el tablón del gremio se encuentra con tres carteles de misiones que aún no han sido asignadas:\n" +
+                "[1] CASTILLO ENCANTADO     [2] BOSQUE MALDITO      [3] CUEVA TENEBROSA");
         switch (keyboard.nextInt())
         {
             case 1:
@@ -78,14 +78,14 @@ public class Main
         //System.out.println(GameTimer.getPlayTime());
     }
 
-    private static void createPlayer()
+    private static Personaje createPlayer()
     {
-        System.out.println("Bienvenido a Macaco. Dinos tu nombre");
+        System.out.println("Bienvenido a Macaco. Dinos tu nombre...");
         Scanner keyboard_nombre = new Scanner(System.in);
         personaje = new Personaje();
 
         personaje.setNombre(keyboard_nombre.nextLine());
-        System.out.println("Muy bien " + personaje.getNombre() + ", preparate para la aventura");
+        System.out.println("Muy bien " + personaje.getNombre() + ", ¡prepárate para la aventura!");
         int puntos=50;
         System.out.println("Tienes 50 puntos para ser distribuidos entre los atributos Ataque, Defensa y Velocidad");
         String[] atributos = {"ataque", "defensa", "velocidad"};
@@ -103,7 +103,8 @@ public class Main
             }
             else
             {
-                System.out.println("Te has pasado de los 50 puntos");
+                System.out.println("Te has pasado de los 50 puntos, no eres digno para jugar Macaco...");
+                System.exit(10);
                 break;
             }
         }
@@ -123,5 +124,7 @@ public class Main
                 + personaje.getAtaque() + " puntos de ataque, "
                 + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
+        return personaje;
     }
+
 }
