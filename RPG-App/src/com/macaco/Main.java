@@ -114,7 +114,8 @@ public class Main
                 System.out.print("../|' v . | .|||||/____|____\\|||| /|. . | . ./\n");
                 System.out.print(".|//\\............/...........\\........../../\\\\\\\n");
 
-
+                Scanner keyboardz = new Scanner(System.in);
+                keyboardz.nextLine();
                 System.out.println("En el camino ves un multitud de huellas muy separadas entre sí, parece que alguien huyó despavorido de éste lugar.");
                 System.out.println("Entras por la puerta principal y en el recibidor encuentras una espada larga ensangrentada.\n¿La cojes?");
                 System.out.println("         />_________________");
@@ -166,7 +167,8 @@ public class Main
                 System.out.print(".         ) | > :                            . '    :'\n");
                 System.out.print("          / ) L_J                            .x,.\n");
                 System.out.print("          L_J .,                             .:<.,\n");
-
+                Scanner keyboardy = new Scanner(System.in);
+                keyboardy.nextLine();
                 System.out.println("Por el camino encuentras un hacha un muy afilada tirada en el suelo, debe de habersele caido a alguien...");
 
                 System.out.println("  ,  /\\  .  ");
@@ -212,7 +214,8 @@ public class Main
                 System.out.print("                                                  \\     \\_     \\     \\      \\   \n");
                 System.out.print("                                                   |      \\     \\     \\      \\  \n");
                 System.out.print("                                                    \\            |            \\ \n");
-
+                Scanner keyboardx = new Scanner(System.in);
+                keyboardx.nextLine();
                 System.out.println("Entras y ves en el suelo una maza y seguidamente un rastro...\n");
 
                 System.out.print("        |\\\n");
@@ -385,54 +388,58 @@ public class Main
         System.out.println("Bienvenido a Macaco. Dinos tu nombre...");
         Scanner keyboard_nombre = new Scanner(System.in);
         personaje = new Personaje();
+      String nombre = keyboard_nombre.nextLine();
+      if(nombre.length()<=10 && nombre.length()>=3){
+        personaje.setNombre(nombre);}
+      else{
+          if (nombre.length()>10 ){
+          System.out.println("Nombre demasiado largo, debes poner un nombre mas corto.");}
+          else{
+          System.out.println("Seguro que no te llamas así, dime un nombre mas largo");
+      }
+          Main.createPlayer();
+      }
 
-        personaje.setNombre(keyboard_nombre.nextLine());
         System.out.println("Muy bien " + personaje.getNombre() + ", ¡prepárate para la aventura!");
         int puntos=50;
         System.out.println("Tienes 50 puntos para ser distribuidos entre los atributos Ataque, Defensa y Velocidad");
+
         String[] atributos = {"ataque", "defensa", "velocidad"};
         Integer[] puntaje_atributos= new Integer[3];
 
-        for (int i = 0; puntos > 0; i++)
-        {
+        for (int i = 0; puntos > 0; i++) {
             System.out.println("¿Cuántos puntos de los " + puntos + " quieres añadirle a " + atributos[i] + "?");
             Scanner keyboard = new Scanner(System.in);
             String puntos_agregados = keyboard.nextLine();
             if (puntos_agregados.matches("[0-9]+") && puntos_agregados.length() >= 1) {
-            if(Integer.parseInt(puntos_agregados) <= puntos)
-            {
-                puntos -= Integer.parseInt(puntos_agregados);
-                puntaje_atributos[i] = Integer.parseInt(puntos_agregados);
-            }
-            else
-            {
-                System.out.println("Te has pasado de los 50 puntos, no eres digno para jugar Macaco...");
-                System.exit(10);
-                break;
-            }
-        }else {
+                if (Integer.parseInt(puntos_agregados) <= puntos) {
+                    puntos = puntos - (Integer.parseInt(puntos_agregados));
+                    puntaje_atributos[i] = Integer.parseInt(puntos_agregados);
+                } else {
+                    System.out.println("Te has pasado de los 50 puntos, no eres digno para jugar Macaco...");
+                    System.exit(10);
+                    break;
+                }
+            } else {
                 System.out.println("¡Solo numeros!");
                 Main.createPlayer();
             }
         }
-        if(puntaje_atributos[0] != null)
-        {
-            personaje.setAtaque(puntaje_atributos[0]);
-        }
-        if(puntaje_atributos[1] != null)
-        {
-            personaje.setDefensa(puntaje_atributos[1]);
-        }
-        if(puntaje_atributos[2] != null)
-        {
-            personaje.setVelocidad(puntaje_atributos[2]);
-        }
-        System.out.println("Perfecto " + personaje.getNombre() + ", tienes "
-                + personaje.getAtaque() + " puntos de ataque, "
-                + personaje.getDefensa()+" de defensa, "+personaje.getVelocidad()+" de velocidad y "
+        if (puntaje_atributos[0] != null) {
+            personaje.ataque = puntaje_atributos[0]+10;
+        } else {personaje.ataque = 10;}
+        if (puntaje_atributos[1] != null) {
+            personaje.defensa = puntaje_atributos[1]+10;
+        }else {personaje.defensa = 10;}
+        if (puntaje_atributos[2] != null) {
+            personaje.velocidad = puntaje_atributos[2]+10;
+        }else {personaje.velocidad = 10;}
+        System.out.println("Perfecto " + personaje.nombre + ", tienes " + personaje.ataque + " puntos de ataque, "
+                + personaje.defensa + " de defensa, " + personaje.velocidad + " de velocidad y "
                 + personaje.getSalud() + " puntos de salud");
-        return personaje;
+    return personaje;
     }
+
 
     private static int randomRange(int min, int max) {
 
