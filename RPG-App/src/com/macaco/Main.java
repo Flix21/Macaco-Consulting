@@ -374,6 +374,7 @@ public class Main
         System.out.println("Muy bien " + personaje.getNombre() + ", ¡prepárate para la aventura!");
         int puntos=50;
         System.out.println("Tienes 50 puntos para ser distribuidos entre los atributos Ataque, Defensa y Velocidad");
+
         String[] atributos = {"ataque", "defensa", "velocidad"};
         Integer[] puntaje_atributos= new Integer[3];
 
