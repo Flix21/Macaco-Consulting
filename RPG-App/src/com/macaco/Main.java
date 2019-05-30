@@ -363,7 +363,11 @@ public class Main
       if(nombre.length()<=10 && nombre.length()>=3){
         personaje.setNombre(nombre);}
       else{
-          System.out.println("Nombre demasiado largo, debes poner un nombre mas corto.");
+          if (nombre.length()>10 ){
+          System.out.println("Nombre demasiado largo, debes poner un nombre mas corto.");}
+          else{
+          System.out.println("Seguro que no te llamas así, dime un nombre mas largo");
+      }
           Main.createPlayer();
       }
 
