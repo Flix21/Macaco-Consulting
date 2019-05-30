@@ -1,6 +1,6 @@
 package com.macaco;
 
-        import java.util.*;
+import java.util.*;
 
 public class Main
 {
@@ -269,7 +269,6 @@ public class Main
             case 1:
                 personaje.setAtaque(personaje.getAtaque() + 10);
                 personaje.setVelocidad(personaje.getVelocidad() - 5);
-                personaje.setWeapon(true);
                 System.out.println("Sabia decisión, has ganado 10 puntos de ataque.");
                 System.out.println("Pero el arma pesa bastante y pierdes 5 puntos de velocidad");
                 System.out.println("Puntos actuales\n" + personaje.getAtaque()+"\n"+ personaje.getDefensa()+
@@ -319,7 +318,6 @@ public class Main
             case 1:
                 personaje.setDefensa(personaje.getDefensa() + 10);
                 personaje.setVelocidad(personaje.getVelocidad() - 5);
-                personaje.setWeapon(true);
                 System.out.println("Sabia decisión, has ganado 10 puntos de defensa.");
                 System.out.println("Pero la armadura pesa bastante y pierdes 5 puntos de velocidad");
                 System.out.println("Puntos actuales\n" + personaje.getAtaque()+"\n"+ personaje.getDefensa()+
