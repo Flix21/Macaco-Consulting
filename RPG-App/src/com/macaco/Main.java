@@ -1,18 +1,23 @@
 package com.macaco;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Main
 {
     private static Personaje personaje;
+    private static GameTimer gt = new GameTimer();
 
     private enum path { NONE, CASTILLO, BOSQUE, CUEVA };
     private static path camino;
     private static List<String> enemy, estancia;
 
+    private static Conexion con = new Conexion();
+
     public static void main(String[] args)  throws InterruptedException /*Excepción necesaria para calcular el tiempo*/
     {
-
+        gt.getPlayTime();
 
         if(personaje == null)
         {
@@ -368,27 +373,49 @@ public class Main
 
     private static void checkEnemyBattle()
     {
-        int randEnemy = randomRange(1,5);
-        if(randEnemy >= 4)
-        {
-            Monstruo monster = new Monstruo("", 10, 20, 20, 45);
+
+            Monstruo monster = new Monstruo("Utrera", 10, 20, 20, 45);
             Combate battle = new Combate(personaje, monster);
             startBattle(battle.doCombate());
-        }
     }
 
     private static void startBattle(Entidad entity)
     {
         if(entity instanceof Monstruo)
         {
-            gameOver(false);
+            //Partida perdida
+
+            gameOver(true);
+            /*
+            try {
+                DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date date = new Date();
+                //System.out.println(dateFormat.format(date)); //2016/11/16 12:08:43
+                con.postRanking(personaje.getNombre(), "50", dateFormat.format(date), Integer.toString(gt.getPlayTime()), entity.nombre,
+                        Integer.toString(personaje.getAtaque()), Integer.toString(personaje.getDefensa()), Integer.toString(personaje.getVelocidad()), "0");
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            */
         }
         else
         {
-          //AGREGAR JUGADOR A LA BBDD
+          //Partida ganada
 
-            //Para saber el tiempo de juego
-            //System.out.println(GameTimer.getPlayTime());
+            try {
+                DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date date = new Date();
+                //System.out.println(dateFormat.format(date)); //2016/11/16 12:08:43
+                con.postRanking(personaje.getNombre(), "100", dateFormat.format(date), Integer.toString(gt.getPlayTime()), "Ha vencido todos los monstruos.",
+                        Integer.toString(personaje.getAtaque()), Integer.toString(personaje.getDefensa()), Integer.toString(personaje.getVelocidad()), Integer.toString(personaje.getSalud()));
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("Has matado al monstruo.");
+            con.getRanking();
         }
     }
 
@@ -426,7 +453,7 @@ public class Main
         // MOSTRAR RANKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
-    private static Personaje createPlayer()
+    private static Personaje createPlayer()  throws InterruptedException
     {
         System.out.println("Bienvenido a Macaco. Dinos tu nombre...");
         Scanner keyboard_nombre = new Scanner(System.in);
